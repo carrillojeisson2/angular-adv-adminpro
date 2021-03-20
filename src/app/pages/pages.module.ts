@@ -1,9 +1,13 @@
+import { ComponentsModule } from './../components/components.module';
 // import { AppRoutingModule } from './../app-routing.module';
 
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 
 import { RouterModule } from '@angular/router';
+import { FormsModule } from '@angular/forms';
+
+import { ChartsModule } from 'ng2-charts';
 
 import { SharedModule } from './../shared/shared.module';
 import { PagesComponent } from './pages.component';
@@ -24,6 +28,13 @@ import { DashboardComponent } from './dashboard/dashboard.component';
     Grafica1Component,
     PagesComponent,
   ],
-  imports: [CommonModule, SharedModule, RouterModule],
+  imports: [
+    CommonModule,
+    SharedModule,
+    RouterModule,
+    FormsModule,
+    ComponentsModule,
+    ChartsModule,
+  ],
 })
 export class PagesModule {}
